@@ -1,0 +1,24 @@
+<mvc:View controllerName="student08.sap.training.diagram.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:suite="sap.suite.ui.commons"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <suite:ChartContainer autoAdjustHeight="true" contentChange="onContentChange" id="idChartContainer" showFullScreen="true" showLegend="true" showPersonalization="false" title="{i18n>diagramTitle}">
+            <suite:content>
+                <suite:ChartContainerContent icon="sap-icon://line-chart" title="{i18n>tableTitle}">
+                    <suite:content>
+                        <viz:Popover id="idLineChartPopover"/>
+                        <viz:VizFrame id="inLineCharVizFrame" height="9.1rem" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+                    </suite:content>
+                </suite:ChartContainerContent>
+                <suite:ChartContainerContent icon="sap-icon://table-chart" title="{i18n>tableTitle}">
+                    <suite:content>
+                        <Table id="idTable">
+                        </Table>
+                    </suite:content>
+                </suite:ChartContainerContent>
+            </suite:content>
+        </suite:ChartContainer>
+    </Page>
+</mvc:View>
